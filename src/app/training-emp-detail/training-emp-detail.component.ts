@@ -101,9 +101,6 @@ export class TrainingEmpDetailComponent implements OnInit {
   }
 
   deleteTrainingEmp(id: number) {
-    this.trainingEmpService.deleteTrainingEmp(id).subscribe(
-      data => console.log(data), error => console.log(error)
-    )
     Swal.fire({
       title: 'Are you sure?',
       text: "Bạn có chắc chắn muốn xóa!",

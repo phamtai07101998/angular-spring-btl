@@ -29,6 +29,8 @@ import { SideLeftComponent } from './pages/side-left/side-left.component';
 
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { AuthGuard } from './auth.guard';
+import { from } from 'rxjs';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { AuthGuard } from './auth.guard';
     HomeComponent,
     LoginComponent,
     NavComponent,
-    SideLeftComponent
+    SideLeftComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { Department } from 'src/app/model/department';
 import { Parts } from 'src/app/model/parts';
 import { PartsService } from 'src/app/service/parts.service';
-import { error } from 'protractor';
 import { FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 

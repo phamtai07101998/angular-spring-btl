@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -44,7 +44,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -143,5 +142,8 @@
       }
     }
   },
-  "defaultProject": "angular-spring-btl"
+  "defaultProject": "angular-spring-btl",
+  "cli": {
+    "analytics": "e4ce91a3-9195-4d83-a814-09b2c5e80a01"
+  }
 }

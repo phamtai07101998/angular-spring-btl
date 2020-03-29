@@ -1,5 +1,4 @@
 import {ValidatorFn, AbstractControl, FormGroup} from '@angular/forms';
-import { Key } from 'protractor';
 
 export const phoneValidate = (): ValidatorFn => {
     return (control: AbstractControl): { [key: string]: string} => {

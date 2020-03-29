@@ -31,7 +31,7 @@
                     <div class="form-group">
                         <label for="name">Loại hợp đồng</label>
                         <select class="form-control" id="sel1" name="contractType" [(ngModel)]="selected"
-                         (ngModelChange) = 'load($event)'>
+                         (ngModelChange) = 'load()'>
                             <option required [value]="1">
                                 Thực tập
                             </option>
@@ -58,15 +58,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let emp of contractEmps | async" [ngSwitch]="emp.empSex">
-                                <td>{{stt}}</td>
-                                <td>{{emp.empName}}</td>
+                            <tr *ngFor="let emp of contractEmps | async" [ngSwitch]="emp.employee.empSex">
+                                <td></td>
+                                <td>{{emp.employee.empName}}</td>
                                 <td *ngSwitchCase="0">Nam</td>
                                 <td *ngSwitchCase="1">Nữ</td>
-                                <td>{{emp.empDob}}</td>
-                                <td>{{emp.empAddress}}</td>
-                                <td>{{emp.empPhone}}</td>
-                                <td>{{emp.contractType}}</td>
+                                <td>{{emp.employee.empDob}}</td>
+                                <td>{{emp.employee.empAddress}}</td>
+                                <td>{{emp.employee.empPhone}}</td>
+                                <td>{{emp.contract.contractType}}</td>
                             </tr>
                         </tbody>
                     </table>

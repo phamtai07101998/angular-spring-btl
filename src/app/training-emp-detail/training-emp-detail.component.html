@@ -44,7 +44,7 @@
                         <tbody>
                             <tr *ngFor="let trainingEmp of trainingEmps | async"
                                 [ngSwitch]="trainingEmp.employee.empSex">
-                                <td>{{stt}}</td>
+                                <td></td>
                                 <td>{{trainingEmp.employee.empName}}</td>
 
                                 <td *ngSwitchCase="0">Nam</td>

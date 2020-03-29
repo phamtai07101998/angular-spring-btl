@@ -13,11 +13,12 @@ import { NhanVienThuViecComponent } from './bao-cao-quan-ly/nhan-vien-thu-viec/n
 import { TrainingEmpDetailComponent } from './training-emp-detail/training-emp-detail.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './auth.guard';
+import {AdminModule} from './admin/admin.module';
 
 
 
 const routes: Routes = [
-  { path: 'user', component: UserListComponent, canActivate: [AuthGuard] },
+
   { path: 'contract', component: HopDongListComponent, canActivate: [AuthGuard] },
   { path: 'parts', component: BoPhanListComponent, canActivate: [AuthGuard] },
   { path: 'department', component: PhongBanListComponent, canActivate: [AuthGuard] },
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'nhan-vien-cty', component: NhanVienCtyComponent, canActivate: [AuthGuard] },
   { path: 'nhan-vien-thu-viec', component: NhanVienThuViecComponent, canActivate: [AuthGuard] },
   { path: 'daotao/detail/:id', component: TrainingEmpDetailComponent, canActivate: [AuthGuard] },
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule', canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];

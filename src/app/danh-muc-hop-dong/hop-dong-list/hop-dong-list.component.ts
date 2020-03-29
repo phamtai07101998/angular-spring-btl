@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { ContractEmpService } from '../../service/contract-emp.service';
 import { UserService } from 'src/app/service/user.service';
 import { ContractService } from 'src/app/service/contract.service';
-import { error } from 'protractor';
 import { Contract } from 'src/app/model/contract';
 import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from 'src/app/service/employee.service';

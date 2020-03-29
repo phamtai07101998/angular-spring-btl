@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenStorageService } from './auth/token-storage.service';
+import { TokenStorageService } from '../auth/token-storage.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class AppComponent implements OnInit {
+export class AdminComponent implements OnInit {
+
   test = false;
   info: any;
   authority: string;
   roles: string[];
   constructor(private token: TokenStorageService, private router: Router) { }
-  title = 'Quan Ly Nhan Su';
-  
 
   ngOnInit() {
     this.info = {
@@ -41,4 +40,5 @@ export class AppComponent implements OnInit {
     this.token.signOut();
     window.location.reload();
   }
+
 }

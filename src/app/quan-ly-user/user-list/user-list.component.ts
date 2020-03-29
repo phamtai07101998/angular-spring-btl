@@ -7,7 +7,6 @@ import { Users } from 'src/app/model/user';
 import { UserRole } from 'src/app/model/user-role';
 import { Role } from 'src/app/model/role';
 import { RoleService } from 'src/app/service/role.service';
-import { error } from 'protractor';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',

@@ -4,7 +4,6 @@ import { Observable, from } from 'rxjs';
 import { EmployeeService } from 'src/app/service/employee.service';
 import { Department } from 'src/app/model/department';
 import { DepartmentService } from 'src/app/service/department.service';
-import { error } from 'protractor';
 import { FormBuilder, Validators } from '@angular/forms';
 import {phoneValidate} from '../../CustomValidate';
 import Swal from 'sweetalert2';
@@ -31,7 +30,7 @@ export class NhanSuListComponent implements OnInit {
     empDob: ['', Validators.required],
     empName: ['', Validators.required],
     empNumberInsurance: ['', Validators.required],
-    empPhone: ['', [Validators.required]],
+    empPhone: ['', [Validators.required,Validators.pattern("(09|03|07|08|05)+([0-9]{8})")]],
     empSex: ['', Validators.required],
     empType: ['', Validators.required],
     department: this.formBuilder.group({
@@ -53,6 +52,18 @@ export class NhanSuListComponent implements OnInit {
 
     this.load();
     this.loadDepartment();
+  }
+
+  getErrorMessage() {
+    if (this.form.get('empPhone').hasError('required')) {
+      return 'Không được bỏ trống';
+    }
+
+    return this.form.get('empPhone').hasError('pattern') ? 'Nhập đúng định dạng' : '';
+  }
+
+  get empPhone(){
+    return this.form.get('empPhone');
   }
 
   load(){

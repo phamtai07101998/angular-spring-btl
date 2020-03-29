@@ -41,7 +41,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let u of users | async">
-                <td>{{stt}}</td>
+                <td></td>
                 <td>{{u.userName}}</td>
                 <td>{{u.userPass}}</td>
                 <td>{{u.userMail}}</td>
@@ -49,9 +49,9 @@
                   <td>{{r.roleName}}</td>
                 </ng-container>
                 <td>
-                  <i class="fas fa-edit" (click)="findUser(u.userId)"
+                  <!-- <i class="fas fa-edit" (click)="findUser(u.userId)"
                     style="cursor: pointer; font-size:24px; padding-right: 5px;" data-toggle="modal"
-                    data-target="#update"></i>
+                    data-target="#update"></i> -->
                   <i class="fa fa-trash" aria-hidden="true" style="font-size:24px; cursor: pointer;"
                     (click)="deleteUser(u.userRoleId)"></i>
                 </td>
